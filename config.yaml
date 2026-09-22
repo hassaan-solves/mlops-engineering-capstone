@@ -1,0 +1,14 @@
+mlflow:
+  tracking_uri: http://localhost:5000
+  model_name: fraud-detector
+  model_alias: "production"
+
+s3:
+  endpoint: http://localhost:8333
+  access_key: weedadmin
+  secret_key: weedadmin123
+  data_bucket: data
+
+api:
+  host: 0.0.0.0
+  port: 8085
