@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fraud-detector
+  namespace: default
+  labels:
+    app: fraud-detector
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fraud-detector
+  template:
+    metadata:
+      labels:
+        app: fraud-detector
+    spec:
+      containers:
+        - name: fraud-detector
+          image: nginx:1.25-alpine
+          ports:
+            - containerPort: 80
